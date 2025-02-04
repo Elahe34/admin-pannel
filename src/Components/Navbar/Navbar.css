@@ -1,8 +1,12 @@
-.slider-close{
-    transform: translateX(-100%);
-    transition: transform 1s ease-in-out;
+.search-box{
+    width: 300px;
+    position: relative;
+    height:30px;
 }
-.slider-open{
-    transform: translateX(0);
-    transition: transform 1s ease-in-out;
+.search-box-icon{
+    position: absolute;
+    left: 210px;
+    top: 22px;
+}
+.search-box:hover{
 }

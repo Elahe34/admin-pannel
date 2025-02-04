@@ -8,9 +8,13 @@ import Slider from "../slider/Slider";
 import { IoMdExit } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
 import "./Navbar.css";
+import { div } from "framer-motion/client";
+import CommentBox from "../Comment/CommentBox";
 
 const Navbar = () => {
   const [openSlider, setOpenSlider] = useState(false);
+  const [openSearchBox, setOpenSearchBox] = useState(false);
+  const [showComments, setShowComments] = useState(false);
   return (
     <nav
       className={`grid h-16 ${openSlider ? "grid-cols-10" : "grid-cols-12"} border-b border-gray-300 shadow-md`}
@@ -47,15 +51,54 @@ const Navbar = () => {
         <div className="flex h-10 items-center">
           <div className="mr-6 flex justify-center">
             <ul className="my-auto flex h-6 items-center gap-4">
-              <li>
-                <a href="">
-                  <IoSearch className="text-xl text-gray-600" />
-                </a>
+              <li className="">
+                <AnimatePresence>
+                  {openSearchBox && (
+                    <motion.input
+                      key="search-box"
+                      type="text"
+                      placeholder="جستجو کنید و لذت ببرید"
+                      className="search-box px-2 py-1 text-sm outline-none"
+                      style={{
+                        width: "0px",
+                        borderBottom: "none",
+                        overflow: "hidden",
+                        transition: "border-bottom 0.3s ease-in-out",
+                      }}
+                      initial={{ width: 0, opacity: 0, borderBottom: "none" }}
+                      animate={{
+                        width: "300px",
+                        opacity: 1,
+                        borderBottom: "2px solid #D00E1D",
+                        transition: { duration: 0.4 },
+                      }}
+                      exit={{
+                        width: 0,
+                        opacity: 0,
+                        borderBottom: "none",
+                        transition: { duration: 0.4 },
+                      }}
+                    />
+                  )}
+                </AnimatePresence>
+                <IoSearch
+                  onClick={() => setOpenSearchBox(!openSearchBox)}
+                  className="search-box-icon text-xl text-gray-600"
+                />
               </li>
               <li>
-                <a href="">
-                  <MdOutlineComment className="text-xl text-gray-600" />
-                </a>
+                <div className="relative">
+                  
+                    <MdOutlineComment
+                      onClick={(e) =>{e.preventDefault(); setShowComments(!showComments)}}
+                      className="cursor-pointer text-xl text-gray-600"
+                    />
+                  {showComments && (
+                    <div className="absolute left-0 top-10 w-80 rounded-md bg-white p-4 shadow-lg">
+                      <CommentBox setShowComments={setShowComments} />
+                    </div>
+                  )}
+                </div>
               </li>
               <li>
                 <a href="">
