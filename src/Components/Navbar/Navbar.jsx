@@ -8,13 +8,15 @@ import Slider from "../slider/Slider";
 import { IoMdExit } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
 import "./Navbar.css";
-import { div } from "framer-motion/client";
 import CommentBox from "../Comment/CommentBox";
+import Notifications from "../notification/Notifications.jsx"
 
 const Navbar = () => {
   const [openSlider, setOpenSlider] = useState(false);
   const [openSearchBox, setOpenSearchBox] = useState(false);
   const [showComments, setShowComments] = useState(false);
+  const [showNotifications, setShowNotifications] = useState(false);
+
   return (
     <nav
       className={`grid h-16 ${openSlider ? "grid-cols-10" : "grid-cols-12"} border-b border-gray-300 shadow-md`}
@@ -88,22 +90,29 @@ const Navbar = () => {
               </li>
               <li>
                 <div className="relative">
+                    <span className="comment-number">۳</span>
                   
                     <MdOutlineComment
                       onClick={(e) =>{e.preventDefault(); setShowComments(!showComments)}}
                       className="cursor-pointer text-xl text-gray-600"
                     />
                   {showComments && (
-                    <div className="absolute left-0 top-10 w-80 rounded-md bg-white p-4 shadow-lg">
+                    <div className="absolute left-0 top-10 w-80 rounded-md bg-white shadow-lg">
                       <CommentBox setShowComments={setShowComments} />
                     </div>
                   )}
                 </div>
               </li>
               <li>
-                <a href="">
-                  <FaRegBell className="text-xl text-gray-600" />
-                </a>
+                <div className="relative">
+                <span className="alert-number">۲۰</span>
+                <FaRegBell onClick={()=>setShowNotifications(!showNotifications)} className="cursor-pointer text-xl text-gray-600" />
+                {showNotifications && (
+                    <div className="absolute left-0 top-10 w-72 rounded-md bg-white shadow-lg">
+                      <Notifications/>
+                    </div>
+                  )}
+                </div>
               </li>
               <li className="">
                 <a href="">

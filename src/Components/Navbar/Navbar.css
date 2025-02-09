@@ -8,5 +8,35 @@
     left: 210px;
     top: 22px;
 }
-.search-box:hover{
+.comment-number{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 17px;
+    height: 17px;
+    align-items: center;
+    top: -5px;
+    right: -15px;
+    font-size: 12px;
+    border: 1px solid crimson;
+    border-radius: 50%;
+    background-color: crimson;
+    color: #fff;
+    padding:0px 1px;
+}
+.alert-number{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 17px;
+    height: 17px;
+    align-items: center;
+    top: -5px;
+    right: -8px;
+    font-size: 12px;
+    border: 1px solid #FBB60E ;
+    border-radius: 50%;
+    background-color: #FBB60E;
+    color: #fff;
+    padding:0px 1px;
 }
