@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { BsArrowsFullscreen } from "react-icons/bs";
 import { FaRegBell } from "react-icons/fa";
 import { MdOutlineComment } from "react-icons/md";
@@ -10,9 +10,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import "./Navbar.css";
 import CommentBox from "../Comment/CommentBox";
 import Notifications from "../notification/Notifications.jsx"
+import { MyContext } from "../../Context.jsx";
 
 const Navbar = () => {
-  const [openSlider, setOpenSlider] = useState(false);
+  const {openSlider, setOpenSlider} = useContext(MyContext);
   const [openSearchBox, setOpenSearchBox] = useState(false);
   const [showComments, setShowComments] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
