@@ -91,7 +91,7 @@ const Navbar = () => {
               </li>
               <li>
                 <div className="relative">
-                    <span className="comment-number">۳</span>
+                    <span className="comment-number" onClick={(e) =>{e.preventDefault(); setShowComments(!showComments)}}>۳</span>
                   
                     <MdOutlineComment
                       onClick={(e) =>{e.preventDefault(); setShowComments(!showComments)}}
@@ -106,7 +106,7 @@ const Navbar = () => {
               </li>
               <li>
                 <div className="relative">
-                <span className="alert-number">۲۰</span>
+                <span className="alert-number" onClick={()=>setShowNotifications(!showNotifications)}>۲۰</span>
                 <FaRegBell onClick={()=>setShowNotifications(!showNotifications)} className="cursor-pointer text-xl text-gray-600" />
                 {showNotifications && (
                     <div className="absolute left-0 top-10 w-72 rounded-md bg-white shadow-lg">

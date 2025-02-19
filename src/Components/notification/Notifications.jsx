@@ -4,7 +4,7 @@ import { HiMiniUsers } from "react-icons/hi2";
 import { IoMdDocument } from "react-icons/io";
 const Notifications = () => {
   return (
-    <div className="rounded-lg border bg-slate-50">
+    <div className="rounded-lg border bg-slate-50 absolute z-50 cursor-pointer">
       <div className="cursor-pointer text-center border-b border-zinc-300">
         <button className="p-2 text-sm">۲۰ اعلان باز نشده</button>
       </div>

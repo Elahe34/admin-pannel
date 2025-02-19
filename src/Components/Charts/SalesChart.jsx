@@ -1,4 +1,4 @@
-import React, { PureComponent, useState } from "react";
+import React from "react";
 import {
   AreaChart,
   Area,
@@ -9,9 +9,9 @@ import {
 } from "recharts";
 import { userData } from "../../data";
 
-const SalesChart = () => {
+const SalesChart = ({openSlider}) => {
   return (
-    <div className="my-3 ml-7 px-0 mr-auto flex flex-col h-[400px] w-[700px] items-center justify-center rounded border border-gray-700 text-sm shadow-lg">
+    <div className={`my-3 ml-7 px-0 mr-auto flex flex-col ${openSlider ? "h-[400px] w-[590px]" :"h-[400px] w-[700px]"} items-center justify-center rounded border border-gray-700 text-sm shadow-lg`}>
       <h6 className=" border-b border-zinc-300 w-full mx-0 pb-[15px] pr-5 text-gray-700"> فروش ماهانه</h6>
       <div className="mt-4">
         <ResponsiveContainer width={600} height={300}>

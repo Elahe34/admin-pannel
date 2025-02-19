@@ -25,7 +25,7 @@ const Slider = () => {
       </div>
       <div className="flex flex-col items-center pt-3 text-[18px]">
         <ul className="flex w-full flex-col items-center pl-0 text-gray-200">
-          <li className="flex h-14 w-48 items-center rounded-sm duration-300 ease-in hover:bg-slate-500">
+          <li className="flex h-20 w-48 items-center rounded-sm duration-300 ease-in hover:bg-slate-500">
             <RxDashboard className="ml-3 mr-6 text-gray-200" />
             <a
               href=""
@@ -34,7 +34,7 @@ const Slider = () => {
               داشبورد
             </a>
           </li>
-          <li className="flex h-14 w-48 items-center rounded-sm duration-300 ease-in hover:bg-slate-500">
+          <li className="flex h-20 w-48 items-center rounded-sm duration-300 ease-in hover:bg-slate-500">
             <RiProfileLine className="ml-3 mr-6 text-gray-200" />
             <a
               href=""
@@ -43,7 +43,7 @@ const Slider = () => {
               پروفایل
             </a>
           </li>
-          <li className="flex h-14 w-48 items-center rounded-sm duration-300 ease-in hover:bg-slate-500">
+          <li className="flex h-20 w-48 items-center rounded-sm duration-300 ease-in hover:bg-slate-500">
             <BiMessageAltDetail className="ml-3 mr-6 text-gray-200" />
             <a
               href=""
@@ -52,7 +52,7 @@ const Slider = () => {
               پیام ها
             </a>
           </li>
-          <li className="flex h-14 w-48 items-center rounded-sm duration-300 ease-in hover:bg-slate-500">
+          <li className="flex h-20 w-48 items-center rounded-sm duration-300 ease-in hover:bg-slate-500">
             <FaChartLine className="ml-3 mr-6 text-gray-200" />
             <a
               href=""
@@ -61,7 +61,7 @@ const Slider = () => {
               نمودارها
             </a>
           </li>
-          <li className="flex h-14 w-48 flex-col items-center justify-center rounded-sm duration-300 ease-in hover:bg-slate-500">
+          <li className="flex h-20 w-48 flex-col items-center justify-center rounded-sm duration-300 ease-in hover:bg-slate-500">
             <div className="flex w-48 items-center rounded-sm">
               <GiBuyCard className="ml-3 mr-6 text-gray-200" />
               <a
@@ -77,7 +77,7 @@ const Slider = () => {
               <li>گزارش فروش</li>
             </ul>
           </li>
-          <li className="flex h-14 w-48 flex-col items-center justify-center rounded-sm duration-300 ease-in hover:bg-slate-500">
+          <li className="flex h-20 w-48 flex-col items-center justify-center rounded-sm duration-300 ease-in hover:bg-slate-500">
             <div className="flex w-48 items-center rounded-sm">
               <RiProductHuntLine className="ml-3 mr-6 text-gray-200" />
               <a
@@ -94,7 +94,7 @@ const Slider = () => {
               <li>دسته بندی ها</li>
             </ul>
           </li>
-          <li className="flex h-14 w-48 flex-col items-center justify-center rounded-sm duration-300 ease-in hover:bg-slate-500">
+          <li className="flex h-20 w-48 flex-col items-center justify-center rounded-sm duration-300 ease-in hover:bg-slate-500">
             <div className="flex w-48 items-center rounded-sm">
               <FaUsersCog className="ml-3 mr-6 text-gray-200" />
               <a
@@ -109,7 +109,7 @@ const Slider = () => {
               <li>نقش ها</li>
             </ul>
           </li>
-          <li className="flex h-14 w-48 flex-col items-center justify-center rounded-sm duration-300 ease-in hover:bg-slate-500">
+          <li className="flex h-20 w-48 flex-col items-center justify-center rounded-sm duration-300 ease-in hover:bg-slate-500">
             <div className="flex w-48 items-center rounded-sm">
               <TbReportAnalytics className="ml-3 mr-6 text-gray-200" />
               <a
@@ -125,7 +125,7 @@ const Slider = () => {
               <li>تحلیل پرداخت ها</li>
             </ul>
           </li>
-          <li className="flex h-14 w-48 flex-col items-center justify-center rounded-sm duration-300 ease-in hover:bg-slate-500">
+          <li className="flex h-20 w-48 flex-col items-center justify-center rounded-sm duration-300 ease-in hover:bg-slate-500">
             <div className="flex w-48 items-center rounded-sm">
               <RiSettings5Line className="ml-3 mr-6 text-gray-200" />
               <a

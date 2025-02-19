@@ -2,9 +2,9 @@ import React from "react";
 import { IoMdTimer } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
 
-const CommentBox = ({ setShowComments }) => {
+const CommentBox = () => {
   return (
-    <div className="border rounded-lg bg-slate-50">
+    <div className="border rounded-lg bg-slate-50 z-50 absolute cursor-pointer">
       <div className="py-2 px-3 flex justify-between border-b border-zinc-300">
         <img src="./images/comment1.jpg" className="w-14 h-14 rounded-full" alt="" />
         <div>
