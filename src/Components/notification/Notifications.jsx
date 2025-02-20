@@ -2,12 +2,15 @@ import React from "react";
 import { BsEnvelope } from "react-icons/bs";
 import { HiMiniUsers } from "react-icons/hi2";
 import { IoMdDocument } from "react-icons/io";
+
 const Notifications = () => {
   return (
     <div className="rounded-lg border bg-slate-50 absolute z-50 cursor-pointer">
+      {/* Button to show unread notifications count */}
       <div className="cursor-pointer text-center border-b border-zinc-300">
         <button className="p-2 text-sm">۲۰ اعلان باز نشده</button>
       </div>
+      {/* Notification item 1: New messages */}
       <div className="border-b border-zinc-300 px-3 py-2">
         <div className="flex justify-between">
           <div className="flex items-center">
@@ -17,6 +20,7 @@ const Notifications = () => {
           <span className="text-xs text-gray-500">۴ ساعت پیش</span>
         </div>
       </div>
+      {/* Notification item 2: Membership requests */}
       <div className="border-b border-zinc-300 px-3 py-2">
         <div className="flex justify-between">
           <div className="flex items-center">
@@ -26,6 +30,7 @@ const Notifications = () => {
           <span className="text-xs text-gray-500">۷ ساعت پیش</span>
         </div>
       </div>
+      {/* Notification item 3: New reports */}
       <div className="border-b border-zinc-300 px-3 py-2">
         <div className="flex justify-between">
           <div className="flex items-center">
@@ -35,6 +40,7 @@ const Notifications = () => {
           <span className="text-xs text-gray-500">۱ ساعت پیش</span>
         </div>
       </div>
+      {/* Button to show all notifications */}
       <div className="cursor-pointer text-center">
         <button className="p-2 text-sm">نمایش همه ی پیغام ها</button>
       </div>

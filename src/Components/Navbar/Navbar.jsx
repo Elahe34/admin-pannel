@@ -13,7 +13,7 @@ import Notifications from "../notification/Notifications.jsx"
 import { MyContext } from "../../Context.jsx";
 
 const Navbar = () => {
-  const {openSlider, setOpenSlider} = useContext(MyContext);
+  const { openSlider, setOpenSlider } = useContext(MyContext);
   const [openSearchBox, setOpenSearchBox] = useState(false);
   const [showComments, setShowComments] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
@@ -22,7 +22,7 @@ const Navbar = () => {
     <nav
       className={`grid h-16 ${openSlider ? "grid-cols-10" : "grid-cols-12"} border-b border-gray-300 shadow-md`}
     >
-      {/* import slider component */}
+      {/* Slider component that appears when openSlider is true */}
       <AnimatePresence>
         {openSlider && (
           <motion.div
@@ -36,10 +36,11 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
       <div
         className={`${openSlider ? "col-span-8" : "col-span-12"} flex h-16 items-center justify-between`}
       >
-        {/* right nav */}
+        {/* Right side of the Navbar: Hamburger menu and site name */}
         <div className="flex">
           <div className="mr-3 flex items-center">
             <button onClick={() => setOpenSlider(!openSlider)}>
@@ -50,10 +51,12 @@ const Navbar = () => {
             <span className="fs-3 mx-2">EliTech</span>
           </div>
         </div>
-        {/* left nav */}
+
+        {/* Left side of the Navbar: Search, Comments, Notifications, Fullscreen, and Logout */}
         <div className="flex h-10 items-center">
           <div className="mr-6 flex justify-center">
             <ul className="my-auto flex h-6 items-center gap-4">
+              {/* Search Box */}
               <li className="">
                 <AnimatePresence>
                   {openSearchBox && (
@@ -89,14 +92,15 @@ const Navbar = () => {
                   className="search-box-icon text-xl text-gray-600"
                 />
               </li>
+
+              {/* Comment Icon and Notification Number */}
               <li>
                 <div className="relative">
-                    <span className="comment-number" onClick={(e) =>{e.preventDefault(); setShowComments(!showComments)}}>۳</span>
-                  
-                    <MdOutlineComment
-                      onClick={(e) =>{e.preventDefault(); setShowComments(!showComments)}}
-                      className="cursor-pointer text-xl text-gray-600"
-                    />
+                  <span className="comment-number" onClick={(e) => {e.preventDefault(); setShowComments(!showComments)}}>۳</span>
+                  <MdOutlineComment
+                    onClick={(e) => {e.preventDefault(); setShowComments(!showComments)}}
+                    className="cursor-pointer text-xl text-gray-600"
+                  />
                   {showComments && (
                     <div className="absolute left-0 top-10 w-80 rounded-md bg-white shadow-lg">
                       <CommentBox setShowComments={setShowComments} />
@@ -104,17 +108,21 @@ const Navbar = () => {
                   )}
                 </div>
               </li>
+
+              {/* Notifications Icon and Alert Number */}
               <li>
                 <div className="relative">
-                <span className="alert-number" onClick={()=>setShowNotifications(!showNotifications)}>۲۰</span>
-                <FaRegBell onClick={()=>setShowNotifications(!showNotifications)} className="cursor-pointer text-xl text-gray-600" />
-                {showNotifications && (
+                  <span className="alert-number" onClick={() => setShowNotifications(!showNotifications)}>۲۰</span>
+                  <FaRegBell onClick={() => setShowNotifications(!showNotifications)} className="cursor-pointer text-xl text-gray-600" />
+                  {showNotifications && (
                     <div className="absolute left-0 top-10 w-72 rounded-md bg-white shadow-lg">
-                      <Notifications/>
+                      <Notifications />
                     </div>
                   )}
                 </div>
               </li>
+
+              {/* Fullscreen Icon */}
               <li className="">
                 <a href="">
                   <BsArrowsFullscreen className="text-gray-600" />
@@ -122,6 +130,8 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
+
+          {/* Logout Icon */}
           <div>
             <IoMdExit className="ml-6 text-2xl text-red-600" />
           </div>
